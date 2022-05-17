@@ -43,10 +43,33 @@ body {
 /* Component Structure */
 .trial {
   margin: 0 auto;
-  width: 75%;
+  width: 70%;
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
   align-items: center;
+}
+
+.wrapper__about {
+  width: 50%;
+}
+
+.wrapper__form {
+  width: 50%;
+}
+
+@media screen and (max-width: 850px) {
+  .trial {
+    width: 85%;
+    flex-direction: column;
+  }
+
+  .wrapper__about {
+    width: 100%;
+  }
+
+  .wrapper__form {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -60,6 +83,85 @@ body {
   }
 }
 
+.wrapper__form form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper__form form > input {
+  padding: 1.5rem 2.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.wrapper__form form > input:focus {
+  border-color: var(--blue);
+}
+
+.wrapper__form form > input::placeholder {
+  font-weight: 600;
+}
+
+.wrapper__form button {
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid hsl(154, 57%, 43%);
+  background: var(--green);
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px solid hsl(154, 57%, 43%);
+}
+
+.wrapper__form button:hover {
+  background: hsl(154, 65%, 65%);
+  border-color: hsl(154, 60%, 55%);
+}
+
+.wrapper__form-cta {
+  background: var(--blue);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px hsl(248, 32%, 49%, 0.2);
+  color: #fff;
+  text-align: center;
+}
+
+/* Component Colors */
+.wrapper__form form {
+  background: #fff;
+}
+
+.wrapper__about h1 {
+  color: #fff;
+  font-size: 5.5rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.wrapper__about p {
+  color: #fff;
+}
+
+.wrapper__form-terms {
+  color: var(--grayish-blue);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wrapper__form-terms a {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* Special Validation Class */
 p[class^="hidden"] {
   display: none;
 }
