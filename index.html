@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -13,17 +11,7 @@
     />
 
     <title>Frontend Mentor | Intro component with sign up form</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <section class="trial">
@@ -43,21 +31,25 @@
             class="wrapper__form-first"
             placeholder="First Name"
           />
+          <p class="hidden-first">First Name cannot be empty</p>
           <input
             type="text"
             class="wrapper__form-last"
             placeholder="Last Name"
           />
+          <p class="hidden-last">Last Name cannot be empty</p>
           <input
             type="email"
             class="wrapper__form-email"
             placeholder="Email Address"
           />
+          <p class="hidden-email">Looks like this is not an email</p>
           <input
             type="password"
             class="wrapper__form-password"
             placeholder="Password"
           />
+          <p class="hidden-password">Password cannot be empty</p>
           <button class="submit">Claim your free trial</button>
           <p class="wrapper__form-terms">
             By clicking the button, you are agreeing to our
