@@ -85,11 +85,11 @@ body {
 
 .wrapper__form form {
   display: flex;
-  gap: 2rem;
   flex-direction: column;
   border-radius: 1rem;
   padding: 3rem;
   box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  gap: 2rem;
 }
 
 .wrapper__form form > input {
@@ -134,9 +134,17 @@ body {
   text-align: center;
 }
 
-/* Component Colors */
+/* Component colors and typography */
 .wrapper__form form {
   background: #fff;
+}
+
+.wrapper__form p[class^="hidden"] {
+  color: var(--red);
+  text-align: right;
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .wrapper__about h1 {
